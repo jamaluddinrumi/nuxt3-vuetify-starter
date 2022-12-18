@@ -1,10 +1,73 @@
+<script>
+  export default {
+    data: () => ({
+      drawer: false,
+      group: null,
+      items: [
+        {
+          title: 'Foo',
+          value: 'foo',
+        },
+        {
+          title: 'Bar',
+          value: 'bar',
+        },
+        {
+          title: 'Fizz',
+          value: 'fizz',
+        },
+        {
+          title: 'Buzz',
+          value: 'buzz',
+        },
+      ],
+    }),
+
+    watch: {
+      group () {
+        this.drawer = false
+      },
+    },
+  }
+</script>
+
 <template>
-  <div class="d-flex align-center flex-column">
-    <v-icon>mdi-home</v-icon>
-    <v-card width="400">
-      <v-card-title>This is a title</v-card-title>
-      <v-card-subtitle>This is a subtitle</v-card-subtitle>
-      <v-card-text> This is content </v-card-text>
-    </v-card>
-  </div>
+  <v-card>
+    <v-layout>
+      <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
+
+      <v-app-bar
+        color="primary"
+        prominent
+      >
+        <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+        <v-toolbar-title>My files</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        <v-btn variant="text" icon="mdi-magnify"></v-btn>
+
+        <v-btn variant="text" icon="mdi-filter"></v-btn>
+
+        <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
+      </v-app-bar>
+
+      <v-navigation-drawer
+        v-model="drawer"
+        location="bottom"
+        temporary
+      >
+        <v-list
+          :items="items"
+        ></v-list>
+      </v-navigation-drawer>
+
+      <v-main>
+        <v-card-text>
+          The navigation drawer will appear from the bottom on smaller size screens.
+        </v-card-text>
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
