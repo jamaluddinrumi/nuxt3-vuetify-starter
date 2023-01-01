@@ -12,6 +12,7 @@
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
 
   // Editor
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.minimap.showSlider": "always",
   "editor.accessibilitySupport": "off",
   "editor.cursorSmoothCaretAnimation": true,
@@ -170,5 +171,7 @@
     "vue": "html",
     "javascript": "javascriptreact"
   },
-  "files.autoSave": "off"
+  // START if using daisy ui
+  // "tailwindCSS.experimental.configFile": "tailwind.config.intellisense.js",
+  // END if using daisy ui
 }
