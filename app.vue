@@ -1,68 +1,48 @@
-<script>
-export default {
-  data: () => ({
-    drawer: false,
-    group: null,
-    items: [
-      {
-        title: "Foo",
-        value: "foo",
-      },
-      {
-        title: "Bar",
-        value: "bar",
-      },
-      {
-        title: "Fizz",
-        value: "fizz",
-      },
-      {
-        title: "Buzz",
-        value: "buzz",
-      },
-    ],
-  }),
+<template>
+  <v-app id="inspire">
+    <v-navigation-drawer v-model="drawer" location="right">
+      <MainMenu />
+    </v-navigation-drawer>
 
-  watch: {
-    group() {
-      this.drawer = false;
-    },
-  },
-};
+    <v-app-bar>
+      <v-toolbar-title>
+        <span class="bangers">INDOMASCOT</span>
+      </v-toolbar-title>
+
+      <v-app-bar-nav-icon @click="drawer = !drawer"> </v-app-bar-nav-icon>
+    </v-app-bar>
+
+    <v-main>
+      <NuxtPage />
+    </v-main>
+  </v-app>
+</template>
+
+<script setup lang="ts">
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/variable.css"; // Contains ONLY variable weights and no other axes.
+import "@fontsource/bangers";
+
+const drawer = ref(null);
+
+useHead({
+  title: "Admin INDOMASCOT",
+});
 </script>
 
-<template>
-  <v-card>
-    <v-layout>
-      <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
+<style>
+body {
+  font-family: "Inter", sans-serif;
+}
 
-      <v-app-bar color="primary" prominent>
-        <v-app-bar-nav-icon
-          variant="text"
-          @click.stop="drawer = !drawer"
-        ></v-app-bar-nav-icon>
+.bangers {
+  font-family: "Bangers", cursive;
+}
 
-        <v-toolbar-title>My files</v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn variant="text" icon="mdi-magnify"></v-btn>
-
-        <v-btn variant="text" icon="mdi-filter"></v-btn>
-
-        <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
-      </v-app-bar>
-
-      <v-navigation-drawer v-model="drawer" location="bottom" temporary>
-        <v-list :items="items"></v-list>
-      </v-navigation-drawer>
-
-      <v-main>
-        <v-card-text>
-          The navigation drawer will appear from the bottom on smaller size
-          screens.
-        </v-card-text>
-      </v-main>
-    </v-layout>
-  </v-card>
-</template>
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 400;
+  }
+}
+</style>
