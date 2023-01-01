@@ -170,7 +170,7 @@
   "emmet.includeLanguages": {
     "vue": "html",
     "javascript": "javascriptreact"
-  },
+  }
   // START if using daisy ui
   // "tailwindCSS.experimental.configFile": "tailwind.config.intellisense.js",
   // END if using daisy ui
