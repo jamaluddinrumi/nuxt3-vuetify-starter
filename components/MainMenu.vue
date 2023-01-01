@@ -17,7 +17,7 @@ export default {
 
 <template>
   <v-card class="pa-2 mx-auto" max-width="300">
-    <v-list>
+    <v-list variant="flat">
       <v-list-subheader>MENU</v-list-subheader>
 
       <v-list-item
