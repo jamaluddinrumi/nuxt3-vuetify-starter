@@ -6,3 +6,4 @@ node_modules
 .output
 .env
 start.sh
+*.DS_Store
