@@ -10,6 +10,8 @@
     "format-watch": "npx pnpm exec onchange \"**/*\" -- npx pnpm exec prettier --ignore-path .gitignore --write --ignore-unknown {{changed}}"
   },
   "devDependencies": {
+    "@fontsource/bangers": "^4.5.9",
+    "@fontsource/inter": "^4.5.14",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.5.0",
@@ -17,6 +19,7 @@
     "nuxt": "3.0.0",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
+    "stylelint-config-prettier": "^9.0.4",
     "stylelint-prettier": "^2.0.0",
     "typescript": "^4.9.4",
     "vue": "^3.2.0"
