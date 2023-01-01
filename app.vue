@@ -23,7 +23,7 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/variable.css"; // Contains ONLY variable weights and no other axes.
 import "@fontsource/bangers";
 
-const drawer = ref(null);
+const drawer = ref(false);
 
 useHead({
   title: "Admin INDOMASCOT",
