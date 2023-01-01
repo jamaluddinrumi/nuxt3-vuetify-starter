@@ -4,7 +4,10 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "npx pnpm exec eslint --ext .js,.ts,.json,.vue,.md --fix .",
+    "format": "npx pnpm exec prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json|vue|md|*rc)\"",
+    "format-watch": "npx pnpm exec onchange \"**/*\" -- npx pnpm exec prettier --ignore-path .gitignore --write --ignore-unknown {{changed}}"
   },
   "devDependencies": {
     "nuxt": "3.0.0",
