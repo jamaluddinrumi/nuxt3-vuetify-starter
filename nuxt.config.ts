@@ -1,9 +1,8 @@
+import vuetify from "vite-plugin-vuetify";
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  css: [
-    "vuetify/lib/styles/main.sass",
-    "@mdi/font/css/materialdesignicons.min.css",
-  ],
+  css: ["vuetify/styles", "@mdi/font/css/materialdesignicons.min.css"],
   build: {
     transpile: ["vuetify"],
   },
@@ -11,5 +10,15 @@ export default defineNuxtConfig({
     define: {
       "process.env.DEBUG": false,
     },
+    ssr: {
+      noExternal: ["vuetify"],
+    },
   },
+  modules: [
+    async (options, nuxt) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) =>
+        config.plugins.push(vuetify())
+      );
+    },
+  ],
 });
