@@ -1,0 +1,14 @@
+# Default Ignore
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+**/.git
+**/.svn
+**/.hg
+
+# Ignore artifacts:
+build
+coverage
+

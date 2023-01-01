@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ]
+}
