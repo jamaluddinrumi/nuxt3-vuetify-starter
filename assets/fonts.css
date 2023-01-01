@@ -1,0 +1,42 @@
+@supports (font-variation-settings: "wght" 900) {
+  .font-weight-black {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 900;
+  }
+}
+@supports (font-variation-settings: "wght" 700) {
+  .font-weight-bold {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 700;
+  }
+}
+@supports (font-variation-settings: "wght" 500) {
+  .font-weight-medium {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 500;
+  }
+}
+@supports (font-variation-settings: "wght" 400) {
+  .font-weight-regular {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 400;
+  }
+}
+@supports (font-variation-settings: "wght" 300) {
+  .font-weight-light {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 300;
+  }
+}
+@supports (font-variation-settings: "wght" 100) {
+  .font-weight-thin {
+    font-family: "InterVariable";
+    font-variation-settings: "wght" 100;
+  }
+}
+@supports (font-variation-settings: "ital" 0) {
+  .font-italic {
+    font-family: "InterVariable";
+    font-variation-settings: "ital" 0;
+  }
+}

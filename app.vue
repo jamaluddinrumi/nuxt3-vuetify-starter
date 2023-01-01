@@ -22,6 +22,8 @@
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/variable.css"; // Contains ONLY variable weights and no other axes.
 import "@fontsource/bangers";
+import "~/assets/fonts.css";
+import "~/assets/app.css";
 
 const drawer = ref(false);
 
@@ -29,20 +31,3 @@ useHead({
   title: "Admin INDOMASCOT",
 });
 </script>
-
-<style>
-body {
-  font-family: "Inter", sans-serif;
-}
-
-.bangers {
-  font-family: "Bangers", cursive;
-}
-
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: "InterVariable";
-    font-variation-settings: "wght" 400;
-  }
-}
-</style>
