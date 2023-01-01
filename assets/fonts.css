@@ -1,35 +1,41 @@
 @supports (font-variation-settings: "wght" 900) {
-  .font-weight-black {
+  .font-weight-black,
+  .font-black {
     font-family: "InterVariable";
     font-variation-settings: "wght" 900;
   }
 }
 @supports (font-variation-settings: "wght" 700) {
-  .font-weight-bold {
+  .font-weight-bold,
+  .font-bold {
     font-family: "InterVariable";
     font-variation-settings: "wght" 700;
   }
 }
 @supports (font-variation-settings: "wght" 500) {
-  .font-weight-medium {
+  .font-weight-medium,
+  .font-medium {
     font-family: "InterVariable";
     font-variation-settings: "wght" 500;
   }
 }
 @supports (font-variation-settings: "wght" 400) {
-  .font-weight-regular {
+  .font-weight-regular,
+  .font-regular {
     font-family: "InterVariable";
     font-variation-settings: "wght" 400;
   }
 }
 @supports (font-variation-settings: "wght" 300) {
-  .font-weight-light {
+  .font-weight-light,
+  .font-light {
     font-family: "InterVariable";
     font-variation-settings: "wght" 300;
   }
 }
 @supports (font-variation-settings: "wght" 100) {
-  .font-weight-thin {
+  .font-weight-thin,
+  .font-thin {
     font-family: "InterVariable";
     font-variation-settings: "wght" 100;
   }
